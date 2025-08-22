@@ -1,0 +1,23 @@
+---
+import '../styles/components/_gallery.sass'
+
+interface Props {
+  align?: string;
+  ratio?: string;
+  list: Array<string>;
+}
+
+const {align, ratio, list=[]} = Astro.props;
+---
+
+<ul class="gallery" class:list={[
+  {'wide-width': align === 'wide'},
+  {'aspect-ratio-gallery': ratio === 'true'},
+]}>
+  {list.map((item, idx) => (
+    <li data-index={idx}>
+      <img src={item}/>
+    </li>
+  ))}
+</ul>
+

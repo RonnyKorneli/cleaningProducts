@@ -1,0 +1,38 @@
+.content-grid
+  display: grid
+  grid-template-columns: [full-width-start] minmax(var(--global-gap), 1fr)[wide-width-start] minmax(0, var(--wide-width-size)) [content-start] min(100% - (var(--global-gap) * 2), var(--content-max-width)) [content-end] minmax(0, var(--wide-width-size)) [wide-width-end] minmax(var(--global-gap), 1fr) [full-width-end]
+
+
+.content-grid > :not(.wide-width, .full-width),
+.full-width > :not(.wide-width, .full-width)
+  grid-column: content
+
+.content-grid > .wide-width
+  grid-column: wide-width
+
+.content-grid > .full-width,
+.content-grid > .carousel
+  grid-column: full-width
+
+  display: grid
+  grid-template-columns: inherit
+
+
+.flow > * + *
+  margin-top: var(--global-gap, 1em)
+
+.section-padding
+  padding-block: var(--global-gap)
+
+
+.columns
+  display: grid
+  grid-gap: var(--global-gap)
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-min)), 1fr))
+
+
+img.full-width
+  width: 100%
+  max-height: 45vh
+  object-fit: cover
+

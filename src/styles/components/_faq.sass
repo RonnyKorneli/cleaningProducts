@@ -1,0 +1,81 @@
+@import '../setup/viewport-mq'
+
+@keyframes rotateBeforeStart
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(-180deg)
+
+@keyframes rotateAfterStart
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(-90deg)
+
+@keyframes rotateMarkerBeforeBack
+  0%
+    transform: rotate(180deg)
+  100%
+    transform: rotate(0deg)
+
+@keyframes rotateMarkerAfterBack
+  0%
+    transform: rotate(90deg)
+  100%
+    transform: rotate(0deg)
+
+details
+  --marker-size: 24px
+  --marker-animation-duration: 250ms
+
+  border-top: 1px solid rgba(var(--clr-foreground-rgb), .125)
+  padding-top: var(--global-gap)
+  padding-bottom: var(--global-gap)
+  padding-left: calc(var(--marker-size) + var(--global-gap) / 2)
+
+  +mq('phablet')
+    padding-top: calc(var(--global-gap) / 2)
+    padding-bottom: calc(var(--global-gap) / 2)
+
+  summary
+    cursor: pointer
+    font-size: var(--fs-400)
+    font-weight: bold
+    position: relative
+
+    &::marker,
+    &::-webkit-details-marker
+      content: ''
+      display: none
+
+    &::before,
+    &::after
+      background-color: var(--clr-foreground)
+      content: ''
+      display: flex
+      height: 2px
+      width: var(--marker-size)
+      position: absolute
+      left: calc(-1 * (var(--marker-size) + var(--global-gap) / 2))
+      top: calc(var(--marker-size) / 1.875)
+
+    &::before
+      animation: rotateBeforeStart var(--marker-animation-duration) forwards ease
+      transform: rotate(0deg)
+
+    &::after
+      animation: rotateAfterStart var(--marker-animation-duration) forwards ease
+      transform: rotate(90deg)
+
+  &[open]
+    summary
+      &::before
+        animation: rotateMarkerBeforeBack var(--marker-animation-duration) forwards ease
+
+      &::after
+        animation: rotateMarkerAfterBack var(--marker-animation-duration) forwards ease
+
+  .faq-inner
+    padding-top: calc(var(--global-gap) / 2)

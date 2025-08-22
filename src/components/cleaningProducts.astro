@@ -1,0 +1,74 @@
+---
+import "../styles/components/cleaningProducts.sass";
+---
+
+<form class="cleaning-list wide-width" id="cleaning-form">
+  <h2>Bestandsaufnahme Reinigung</h2>
+
+  <div class="list-row">
+    <label for="product1">Produkt 1</label>
+    <input
+      type="number"
+      id="product1"
+      name="product1"
+      placeholder="Menge eintragen"
+    />
+  </div>
+
+  <div class="list-row">
+    <label for="product2">Produkt 2</label>
+    <input
+      type="number"
+      id="product2"
+      name="product2"
+      placeholder="Menge eintragen"
+    />
+  </div>
+
+  <div class="list-row">
+    <label for="product3">Produkt 3</label>
+    <input
+      type="number"
+      id="product3"
+      name="product3"
+      placeholder="Menge eintragen"
+    />
+  </div>
+
+  <div class="form-footer">
+    <button type="submit">Speichern</button>
+  </div>
+</form>
+
+<script>
+  const form = document.getElementById("cleaning-form") as HTMLFormElement;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      product1: formData.get("product1"),
+      product2: formData.get("product2"),
+      product3: formData.get("product3")
+    };
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxVhrw4qUAlGFHnySpSbN36XaFiXYKBar9Uk1pWAd1gwuDWvjxUVdXH-yC6qgLlVmL1UA/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
+
+      const result = await response.json();
+      console.log("Google Sheets response:", result);
+    } catch (err) {
+      console.error("Error sending data to Sheets:", err);
+    }
+  });
+</script>

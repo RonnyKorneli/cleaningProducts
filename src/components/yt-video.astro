@@ -1,0 +1,37 @@
+---
+import "../styles/components/_yt-video.sass";
+
+interface Props {
+  id?: string;
+  thumbnail?: string;
+}
+
+const { id, thumbnail = "" } = Astro.props;
+const uid = String(
+    Date.now().toString(32) +
+    Math.random().toString(16)
+  ).replace(/\./g, '')
+---
+
+<div id={uid} class="youtube-video" class:list={[{'has-thumb':thumbnail}]} style={thumbnail ? `background-image:url(${thumbnail})` : ''}>
+  <iframe data-src=`https://www.youtube-nocookie.com/embed/${id}?rel=0&amp;showinfo=0` width="768" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <button class="load-external-content">Hier klicken und externen Inhalt von Youtube laden?</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const videos = document.querySelectorAll('.youtube-video')
+  videos.forEach((video) => {
+    const trigger = video.querySelector('button')
+    trigger?.addEventListener('click', () => {
+      const videoFrame = document.getElementById(video.id)
+      videoFrame?.querySelector('iframe')?.setAttribute('src', video.children[0].dataset.src)
+      videoFrame?.querySelector('iframe')?.removeAttribute('data-src')
+      videoFrame?.querySelector('.load-external-content')?.remove()
+    });
+  })
+})
+</script>
+
+

@@ -1,0 +1,92 @@
+// dom strucutre for carousel
+// inspired by: ryan mulligan
+
+// .carousel
+//   .carousel-inner
+//     .item
+//     .item
+
+.carousel
+  --navigation-height: 3rem
+
+  padding-block: var(--global-gap)
+  overflow-x: scroll
+  overscroll-behavior-x: contain
+  padding-top: 0
+  padding-bottom: 0
+  scroll-snap-type: x mandatory
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+    inline-size: 0 !important
+    display: none
+
+.carousel-inner
+  grid-column: content
+  display: flex
+  align-items: center
+  gap: calc(var(--global-gap) / 2)
+  margin-top: var(--navigation-height)
+
+  &::after
+    content: ''
+    align-self: stretch
+    padding-inline-end: max(var(--global-gap), (100vw - var(--content-max-width)) / 2 - var(--global-gap))
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  // for increase or decrease item size, define max-inline-size at a separate class
+  .item
+    background-color: rgba(var(--clr-foreground-rgb), .1)
+    flex-shrink: 0
+    display: flex
+    scroll-snap-align: center
+    inline-size: 100%
+    max-inline-size: 25rem
+    aspect-ratio: 16/9
+    overflow: hidden
+
+    &.large
+      max-inline-size: 32rem
+
+    &.content-width
+      max-inline-size: var(--content-max-width)
+
+    &:last-child
+      margin-right: var(--global-gap)
+
+.carousel-navigation
+  align-items: center
+  display: flex
+  flex-flow: row nowrap
+  gap: var(--global-gap)
+  height: var(--navigation-height)
+  justify-content: center
+  margin-left: auto
+  margin-right: auto
+  position: absolute
+  width: 100%
+
+  button
+    background: transparent
+    border: 0
+    color: var(--clr-foreground)
+    display: block
+    margin: unset
+    margin-bottom: var(--space-m-xl)
+    padding: 0
+
+// fallback
+@supports not (aspect-ratio: 1)
+  .carousel-inner .item::before
+    float: left
+    padding-top: 56.25%
+    content: ''
+
+  .carousel-inner .item::after
+    display: block
+    content: ''
+    clear: both

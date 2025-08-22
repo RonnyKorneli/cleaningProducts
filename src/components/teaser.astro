@@ -1,0 +1,28 @@
+---
+import '../styles/components/_teaser.sass'
+
+interface Props {
+  align?: string;
+  image: string;
+  imageMobile?: string;
+  imageAlt?: string;
+}
+
+const {align, image, imageMobile="", imageAlt=""} = Astro.props;
+---
+
+<div class="teaser" class:list={[
+  {'align-left': align === 'left'},
+  {'align-right': align === 'right'},
+]}>
+
+
+  <picture class="teaser-image">
+    {imageMobile ? <source media="(max-width: 768px)" srcset={imageMobile} /> : ''}
+    <img src={image} alt={imageAlt} />
+  </picture>
+
+  <div class="teaser-content">
+    <slot />
+  </div>
+</div>

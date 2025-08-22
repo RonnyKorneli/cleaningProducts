@@ -1,0 +1,36 @@
+---
+const { title } = Astro.props;
+---
+
+<footer class="content-grid">
+
+  <div class="footer-nav columns">
+    <nav role="navigation">
+      <ul class="social-media">
+        <li><a href="https://www.instagram.com/" class="instagram" target="_blank">Instagram</a></li>
+      </ul>
+    </nav>
+
+    <nav role="navigation">
+      <ul class="footer-nav">
+        <li><a href=`${import.meta.env.BASE_URL}impressum/`>Impressum</a></li>
+        <li><a href=`${import.meta.env.BASE_URL}datenschutz/`>Datenschutz</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="full-width site-notice">
+    <small>
+      &copy; <span id="copyright"></span>&nbsp;Studio Zweibrand &mdash; All rights reserved
+    </small>
+  </div>
+</footer>
+
+<script>
+  const yearSelector = document.querySelector("#copyright")
+  if (yearSelector) {
+    yearSelector.textContent = new Date()
+      .getFullYear()
+      .toString();
+  }
+</script>

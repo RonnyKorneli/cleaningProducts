@@ -1,0 +1,27 @@
+---
+import '../styles/components/_carousel.sass'
+---
+
+<section class="carousel">
+  <nav class="carousel-navigation" role="navigation">
+    <button class="carousel-prev">previous</button>
+    <button class="carousel-next">next</button>
+  </nav>
+
+  <div class="carousel-inner">
+    <slot />
+  </div>
+</section>
+
+
+<script>
+import { setCarouselXPos, carouselFunc  } from '../scripts/carousel-nav'
+
+document.addEventListener('DOMContentLoaded', () => {
+  carouselFunc()
+})
+
+window.addEventListener('resize', () => {
+  setCarouselXPos()
+})
+</script>

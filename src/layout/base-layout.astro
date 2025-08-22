@@ -1,0 +1,24 @@
+---
+import "../styles/style.sass";
+// component import
+import MainHead from "../components/main-head.astro";
+
+const {
+  title = "Studio Zweibrand Astro Starter Kit",
+  description = "Page Description",
+  isLight = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <MainHead {title} {description} />
+
+  <body class:list={[{ "is-light": isLight }]}>
+    <div class="page">
+      <slot>Content goes here</slot>
+    </div>
+  </body>
+</html>
+
+<style lang="sass"></style>
