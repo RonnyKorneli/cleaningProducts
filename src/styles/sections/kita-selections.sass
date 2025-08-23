@@ -4,7 +4,6 @@
   align-items: center
   justify-content: center
   min-height: 100dvh
-  min-height: 100vh
   text-align: center
   font-family: sans-serif
 
@@ -34,6 +33,19 @@
   align-items: center
   justify-content: center
   transition: transform 0.2s, box-shadow 0.2s
+  opacity: 0
+  transform: translateY(50px)
+  animation: flyIn 0.6s ease-out forwards
+
+  // Buttons come one after the other
+  &:nth-child(1)
+    animation-delay: 0.2s
+  &:nth-child(2)
+    animation-delay: 0.4s
+  &:nth-child(3)
+    animation-delay: 0.6s
+  &:nth-child(4)
+    animation-delay: 0.8s
 
   &:hover
     transform: scale(1.05)
@@ -53,3 +65,12 @@
 
 .green
   background-color: #2ecc71
+
+// ✨ Keyframes for flying in
+@keyframes flyIn
+  from
+    opacity: 0
+    transform: translateY(50px) scale(0.9)
+  to
+    opacity: 1
+    transform: translateY(0) scale(1)
