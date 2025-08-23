@@ -1,0 +1,46 @@
+.kita-selection
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: 100vh
+  text-align: center
+  font-family: sans-serif
+
+.button-container
+  display: flex
+  flex-direction: column
+  gap: 1.5rem
+  margin-top: 2rem
+
+.kita-btn
+  display: inline-block
+  padding: 1rem 2rem
+  border-radius: 50%
+  text-decoration: none
+  color: white
+  font-size: 1.2rem
+  font-weight: bold
+  width: 180px
+  height: 180px
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: transform 0.2s, box-shadow 0.2s
+
+  &:hover
+    transform: scale(1.05)
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2)
+
+.red
+  background-color: #e74c3c
+
+.orange
+  background-color: #e67e22
+
+.yellow
+  background-color: #f1c40f
+  color: #333
+
+.green
+  background-color: #2ecc71
