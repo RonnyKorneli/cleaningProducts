@@ -1,0 +1,16 @@
+---
+interface Props {
+  name: string;
+  id: string;
+  label: string;
+  forOnLabel: string;
+  placeholderName: string;
+}
+
+const { name, id, label, forOnLabel, placeholderName } = Astro.props;
+---
+
+<div class="list-row">
+  <label for={forOnLabel}>{name}</label>
+  <input type="number" id={id} name={name} placeholder={placeholderName} />
+</div>
