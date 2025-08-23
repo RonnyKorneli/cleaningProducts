@@ -28,7 +28,7 @@
   border-radius: 50%;
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: calc(var(--fs-500));
   font-weight: bold;
   width: 160px;
   height: 150px;
