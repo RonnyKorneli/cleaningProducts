@@ -15,10 +15,33 @@ import CleaningProducts from "../components/cleaningProducts.astro";
 <script>
   const params = new URLSearchParams(window.location.search);
   const kita = params.get("kita");
+
   if (kita) {
     const heading = document.getElementById("kita-heading");
+
     if (heading) {
       heading.innerText = kita;
+
+      // Map Kita names to color classes
+      let colorClass = "";
+      switch (kita) {
+        case "Kita Mucklabo":
+          colorClass = "red";
+          break;
+        case "Kita Lillebror":
+          colorClass = "orange";
+          break;
+        case "Kita Tommelise":
+          colorClass = "yellow";
+          break;
+        case "Kita Hucky Bucky":
+          colorClass = "green";
+          break;
+      }
+
+      if (colorClass) {
+        heading.classList.add(colorClass);
+      }
     }
   }
 </script>
