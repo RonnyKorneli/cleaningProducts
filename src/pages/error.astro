@@ -25,6 +25,9 @@ import MainLayout from "../layout/base-layout.astro";
   .error-page h1
     font-size: 3rem
     color: #e74c3c
+    widt: 200px
+    height: 100px
+    border-radius: 5px
     margin-bottom: 1rem
 
   .error-page h3
@@ -39,6 +42,9 @@ import MainLayout from "../layout/base-layout.astro";
     margin-top: 0.5rem
 
   .try-again-button
+    all: unset
+    display: inline-block
+    cursor: pointer
     padding: calc(var(--global-gap) * 0.5)
     background: #e74c3c
     color: var(--forground)
