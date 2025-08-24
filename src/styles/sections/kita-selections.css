@@ -60,23 +60,23 @@
 .red {
   background-color: #e74c3c;
   margin-right: 10px;
-  color: var(--background);
+  color: #08100c;
 }
 
 .orange {
   background-color: #e67e22;
-  color: var(--background);
+  color: #08100c;
 }
 
 .yellow {
   background-color: #f1c40f;
   margin-right: 10px;
-  color: var(--foreground);
+  color: #fcfcf7;
 }
 
 .green {
   background-color: #2ecc71;
-  color: var(--background);
+  color: #08100c;
 }
 
 @keyframes flyIn {
