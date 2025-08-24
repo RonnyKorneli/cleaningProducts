@@ -27,17 +27,21 @@ import { products } from "../data/products"; // adjust path if needed
 
 <script>
   const form = document.getElementById("cleaning-form") as HTMLFormElement;
+  const params = new URLSearchParams(window.location.search);
+  const kita = params.get("kita");
 
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const formData = new FormData(form);
-      const data = {};
+      const data: Record<string, any> = {};
 
       formData.forEach((value, key) => {
         data[key] = value;
       });
+
+      data.kita = kita;
 
       console.log("Collected data:", data);
 
