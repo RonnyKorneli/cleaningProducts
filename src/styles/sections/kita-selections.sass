@@ -1,3 +1,5 @@
+@import "../setup/_viewport-mq.sass"
+
 .kita-selection
   display: flex
   flex-direction: column
@@ -28,7 +30,7 @@
   font-size: calc(var(--fs-500) )
   font-weight: bold
   width: 160px
-  height: 150px
+  height: 160px
   display: flex
   align-items: center
   justify-content: center
@@ -74,3 +76,9 @@
   to
     opacity: 1
     transform: translateY(0) scale(1)
+
++mq("phablet")
+  .kita-btn
+    font-size: calc(var(--fs-400) )
+    width: 200px
+    height: 200px
