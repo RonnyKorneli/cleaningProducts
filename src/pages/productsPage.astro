@@ -7,6 +7,18 @@ import CleaningProducts from "../components/cleaningProducts.astro";
 
 <MainLayout title="Astro Starter Kit">
   <main class="flow content-grid">
+    <h1 id="kita-heading"></h1>
     <CleaningProducts />
   </main>
 </MainLayout>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const kita = params.get("kita");
+  if (kita) {
+    const heading = document.getElementById("kita-heading");
+    if (heading) {
+      heading.innerText = kita;
+    }
+  }
+</script>
