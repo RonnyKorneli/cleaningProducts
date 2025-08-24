@@ -4,6 +4,7 @@ import MainLayout from "../layout/base-layout.astro";
 
 <MainLayout title="Success">
   <main class="success-page">
+    <h1 id="kita-name-where"></h1>
     <h1>Success!!</h1>
     <h2>Cleaning products for Kita has been ordered</h2>
 
@@ -43,3 +44,16 @@ import MainLayout from "../layout/base-layout.astro";
   .exit-btn:hover
     background-color: #27ae60
 </style>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const kita = params.get("kita");
+
+  if (kita) {
+    const heading = document.getElementById("kita-name-where");
+
+    if (heading) {
+      heading.innerText = kita;
+    }
+  }
+</script>
