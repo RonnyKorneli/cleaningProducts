@@ -2,11 +2,11 @@
 import "../styles/components/cleaningProducts.sass";
 import InputField from "./inputForm.astro";
 
-import { products } from "../data/products"; // adjust path if needed
+import { products } from "../data/products";
 ---
 
 <form class="cleaning-list wide-width" id="cleaning-form">
-  <h2>Bestandsaufnahme Reinigung</h2>
+  <h2>What do we have in Storage</h2>
 
   {
     products.map((p) => (
@@ -25,6 +25,33 @@ import { products } from "../data/products"; // adjust path if needed
   </div>
 </form>
 
+<style lang="sass">
+  /* Spinner inside button */
+  button.loading
+    position: relative
+    color: transparent
+    pointer-events: none
+
+  button.loading::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 20px
+    height: 20px
+    border: 2px solid #fff
+    border-top-color: transparent
+    border-radius: 50%
+    animation: spin 1s linear infinite
+
+  @keyframes spin
+    from
+      transform: translate(-50%, -50%) rotate(0deg)
+    to
+      transform: translate(-50%, -50%) rotate(360deg)
+</style>
+
 <script>
   const form = document.getElementById("cleaning-form") as HTMLFormElement;
   const submitButton = form.querySelector(
@@ -37,15 +64,14 @@ import { products } from "../data/products"; // adjust path if needed
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      if (submitButton) submitButton.disabled = true;
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.classList.add("loading"); // add spinner
+      }
 
       const formData = new FormData(form);
       const data: Record<string, any> = {};
-
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
-
+      formData.forEach((value, key) => (data[key] = value));
       data.kita = kita;
 
       console.log("Collected data:", data);
@@ -67,6 +93,10 @@ import { products } from "../data/products"; // adjust path if needed
         console.log("Google Sheets response:", result);
       } catch (err) {
         console.error("Error sending data to Sheets:", err);
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.classList.remove("loading");
+        }
       }
     });
   }
