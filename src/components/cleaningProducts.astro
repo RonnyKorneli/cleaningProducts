@@ -53,6 +53,11 @@ import { products } from "../data/products"; // adjust path if needed
         });
 
         const result = await response.json();
+
+        if (result.success) {
+          window.location.href = "/success";
+        }
+
         console.log("Google Sheets response:", result);
       } catch (err) {
         console.error("Error sending data to Sheets:", err);
