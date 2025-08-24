@@ -7,6 +7,7 @@ import MainLayout from "../layout/base-layout.astro";
     <h1>Oh no! That did not work!!</h1>
     <h3>Try again, or call the admin.</h3>
     <p>📞 +004917663254255</p>
+    <button><a href="/" class="try-again-button">Try Again</a></button>
   </main>
 </MainLayout>
 
@@ -36,4 +37,9 @@ import MainLayout from "../layout/base-layout.astro";
     color: #333
     font-weight: bold
     margin-top: 0.5rem
+
+  .try-again-button
+    padding: calc(var(--global-gap) * 0.5)
+    background: #e74c3c
+    color: var(--forground)
 </style>
