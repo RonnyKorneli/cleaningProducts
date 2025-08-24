@@ -1,5 +1,3 @@
-# Studio Zweibrand – Astro Starter Kit
-
 **Static Page Construct Based on Astro**
 
 This is a base starter kit with basic components and css for building astro pages.
@@ -34,7 +32,7 @@ This is a base starter kit with basic components and css for building astro page
   - 'desktop-wide': 1560px
 - one value (px, rem, ...) or predefined width as minimal width
 - two values or predefined widths for definition between width-range
-- one value with optional __'max'__ for definition of **maximum width** (max-width: VALUE)
+- one value with optional **'max'** for definition of **maximum width** (max-width: VALUE)
 - the mixin is for use with self defined values or predefined values (list above)
 - all generated css will be valid and supports modern browser (https://caniuse.com/?search=media%20queries)
 
@@ -89,6 +87,9 @@ Defined CI-variables for staging deployment:
 - fully build for productive
 - save artifacts for download
 - **no active productive deployment integrated**
+
 # cleaningProducts
+
 # cleaningProducts
+
 # cleaningProducts
