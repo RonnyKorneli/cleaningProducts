@@ -24,7 +24,7 @@ export const products = [
   {
     id: "scouringMilk",
     name: "Milk / Cream Cleanser",
-    label: "Scouring milk/cream cleanser (Number of small packs)",
+    label: "Scouring milk/cream cleanser (Number of bottles)",
     forOnLabel: "scouring-milk",
     placeholderName: "Menge eintragen"
   },
