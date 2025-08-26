@@ -31,14 +31,14 @@ export const products = [
   {
     id: "foldedPaperTowels",
     name: "Folded Paper Towels",
-    label: "Folded paper towels (Number of full packs still there)",
+    label: "Folded paper towels (Number of full boxes)",
     forOnLabel: "folded-paper-towels",
     placeholderName: "Menge eintragen"
   },
   {
     id: "toiletPaper",
     name: "Toilet Paper",
-    label: "Toilet Paper (Number of Rolls still there)",
+    label: "Toilet Paper (Number of Packs still there)",
     forOnLabel: "toilet-paper",
     placeholderName: "Menge eintragen"
   },
