@@ -10,7 +10,8 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^4.0.7"
+    "astro": "^4.0.7",
+    "i18next": "^25.4.2"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.3",

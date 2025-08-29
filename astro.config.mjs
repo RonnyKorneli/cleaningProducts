@@ -8,6 +8,15 @@ import mkcert from 'vite-plugin-mkcert';
 
 export default defineConfig({
   output: 'static',
+
+   i18n: {
+    locales: ["no", "en", "de"],
+    defaultLocale: "no",
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
+
   compressHTML: true,
   trailingSlash: 'always',
   base: (process.env.npm_lifecycle_event === 'stage') ? 'astro-starter/' : '/',
