@@ -1,8 +1,10 @@
 ---
 import "../styles/components/cleaningProducts.sass";
 import InputField from "./inputForm.astro";
-
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { products } from "../data/products";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <form class="cleaning-list wide-width" id="cleaning-form">
@@ -12,10 +14,10 @@ import { products } from "../data/products";
     products.map((p) => (
       <InputField
         id={p.id}
-        name={p.id}
-        label={p.label}
-        forOnLabel={p.forOnLabel}
-        placeholderName={p.placeholderName}
+        name={p.id[lang]}
+        label={p.label[lang]}
+        forOnLabel={p.forOnLabel[lang]}
+        placeholderName={p.placeholderName[lang]}
       />
     ))
   }

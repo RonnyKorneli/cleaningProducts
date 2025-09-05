@@ -19,7 +19,7 @@ export const ui = {
   },
   no:{
     'home.headline':'Rengjøringsprodukter',
-    'home.chooseKita':'Choose a Kita',
+    'home.chooseKita':'Velg en barnehage',
 
 
   }
