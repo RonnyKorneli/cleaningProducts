@@ -13,12 +13,12 @@ export default defineConfig({
     locales: ["no", "en", "de"],
     defaultLocale: "de",
     routing: {
-      prefixDefaultLocale: false,
+      prefixDefaultLocale: true,
     },
   },
 
   compressHTML: true,
-  trailingSlash: 'always',
+  trailingSlash: 'never',
   base: '/',
   vite: {
     plugins: [
