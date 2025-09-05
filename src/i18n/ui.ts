@@ -9,16 +9,16 @@ export const defaultLang = 'de';
 
 export const ui = {
   de: {
-    'nav.pageName':'Julians Stories',
+    'home.headline':'Reinigungsprodukte',
     'nav.traditionalStories':'Traditional Fairytails',
   },
   en: {
-    'nav.pageName':'Julians Geschichten',
+    'home.headline':'Cleaning Products',
     'nav.traditionalStories':'Traditionelle Märchen ',
 
   },
   no:{
-    'nav.pageName':'Julians Historier',
+    'home.headline':'Rengjøringsprodukter',
     'nav.traditionalStories':'Tradisjonelle eventyr',
     'nav.whoIsJulian':'Hvem er Julian?',
 
