@@ -4,13 +4,17 @@ import "../../styles/sections/kita-selections.sass";
 import MainLayout from "../../layout/base-layout.astro";
 import LanguagePicker from "../../components/languagePicker.astro";
 import Navbar from "../../components/navbar.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <MainLayout title="Nobiwerk Cleaning Products">
   <main class="kita-selection">
     <Navbar />
-    <h1>Cleaning Products</h1>
-    <h2>Choose a Kita</h2>
+    <h1>{t("home.headline")}</h1>
+    <h2>{t("home.chooseKita")}</h2>
     <div class="button-container">
       <div class="button-group">
         <a href="/no/productspage/?kita=Kita%20Mucklabo" class="kita-btn red"

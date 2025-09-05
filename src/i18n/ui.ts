@@ -10,17 +10,17 @@ export const defaultLang = 'de';
 export const ui = {
   de: {
     'home.headline':'Reinigungsprodukte',
-    'nav.traditionalStories':'Traditional Fairytails',
+    'home.chooseKita':'Wähle eine Kita',
   },
   en: {
     'home.headline':'Cleaning Products',
-    'nav.traditionalStories':'Traditionelle Märchen ',
+    'home.chooseKita':'Choose a Kita',
 
   },
   no:{
     'home.headline':'Rengjøringsprodukter',
-    'nav.traditionalStories':'Tradisjonelle eventyr',
-    'nav.whoIsJulian':'Hvem er Julian?',
+    'home.chooseKita':'Choose a Kita',
+
 
   }
 } as const;
