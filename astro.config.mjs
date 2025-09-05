@@ -19,7 +19,7 @@ export default defineConfig({
 
   compressHTML: true,
   trailingSlash: 'always',
-  base: (process.env.npm_lifecycle_event === 'stage') ? 'astro-starter/' : '/',
+  base: '/',
   vite: {
     plugins: [
       mkcert(),
@@ -35,6 +35,6 @@ export default defineConfig({
   build: {
     sourcemap: (process.env.npm_lifecycle_event === 'dev') ? true : false,
   },
-  site: 'https://www.studio-zweibrand.de',
+  site: '',
   integrations: [sitemap()],
 });
