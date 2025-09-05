@@ -4,8 +4,8 @@ export default async (request, context) => {
     const acceptLang = request.headers.get("accept-language") || "";
     const lang = acceptLang.split(",")[0].split("-")[0]; // e.g. "no", "en", "de"
 
-    let target = "/en/"; // fallback
-    if (lang === "no") target = "/no/";
+    let target = "/de/"; // fallback
+    if (lang === "en") target = "/en/";
     else if (lang === "de") target = "/de/";
 
     return Response.redirect(new URL(target, request.url), 302);
