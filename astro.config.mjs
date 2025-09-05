@@ -35,6 +35,6 @@ export default defineConfig({
   build: {
     sourcemap: (process.env.npm_lifecycle_event === 'dev') ? true : false,
   },
-  site: '',
+  site: 'https://cleaning-products-nobiwerk.netlify.app/',
   integrations: [sitemap()],
 });
