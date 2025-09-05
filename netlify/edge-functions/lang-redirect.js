@@ -6,7 +6,7 @@ export default async (request, context) => {
 
     let target = "/de/"; // fallback
     if (lang === "en") target = "/en/";
-    else if (lang === "de") target = "/de/";
+    else if (lang === "no") target = "/no/";
 
     return Response.redirect(new URL(target, request.url), 302);
   }
