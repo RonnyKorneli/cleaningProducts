@@ -80,6 +80,139 @@ export const products = [
 // src/data/products.ts
 export const products = [
   {
+    id: "disposable changing mat",
+    name: {
+      de: "Wickeltisch Papier",
+      en: "disposable changing mat",
+      no: "engangs stelleunderlag"
+    },
+    label: {
+      de: "Wickeltisch Papier (Anzahl Ganze Rollen noch vorhanden)",
+      en: "Changing table paper (Number of full rolls still there)",
+      no: "Engangs stelleunderlag (Antall Fulle ruller igjen)"
+    },
+    placeholderName: {
+      de: "Wickeltisch Papier",
+      en: "Changing table paper",
+      no: "Engangs stelleunderlag"
+    },
+    forOnLabel: ""
+  },
+  {
+    id: "Garbage Bags",
+    name: {
+      de: "Müllbeutel",
+      en: "Garbage bags",
+      no: "Söppelsekker"
+    },
+    label: {
+      de: "Müllsäcke (Anzahl Ganze Rollen noch vorhanden)",
+      en: "Garbage bags (Number of full Bags still there)",
+      no: "Söppel sekker(antall Fulle ruller igjen)"
+    },
+    placeholderName: {
+      de: "Anzahl Müllsackrollen eintragen",
+      en: "Enter number of full rolls left",
+      no: "Skriv inn antall fulle ruller Söppelsekker"
+    },
+    forOnLabel: ""
+  },
+  {
+    id: "Small Mops",
+    name: {
+      de: "Kleine Mop",
+      en: "Small Mop",
+      no: "Liten Mop"
+    },
+    label: {
+      de: "Flächen Desinfektion (Anzahl Kanister noch vorhanden)",
+      en: "Surface Desinfect (Number of full Kanister still there)",
+      no: " Desinfeksjon for overflater (antall Kanister igjen)"
+    },
+    placeholderName: {
+      de: "Anzahl Kanister eintragen",
+      en: "Enter number of Kanister",
+      no: "Skriv inn antall Kanister"
+    },
+    forOnLabel: ""
+  },
+  {
+    id: "toilet cleaner",
+    name: {
+      de: "wc reiniger",
+      en: "toilet cleaner",
+      no: "toalettrens"
+    },
+    label: {
+      de: "Flächen Desinfektion (Anzahl Kanister noch vorhanden)",
+      en: "Surface Desinfect (Number of full Kanister still there)",
+      no: " Desinfeksjon for overflater (antall Kanister igjen)"
+    },
+    placeholderName: {
+      de: "Anzahl Kanister eintragen",
+      en: "Enter number of Kanister",
+      no: "Skriv inn antall Kanister"
+    },
+    forOnLabel: ""
+  },
+  {
+    id: "Surface Desinfect",
+    name: {
+      de: "Flächen Desinfektion",
+      en: "Surface Desinfect",
+      no: "Desinfeksjon for overflater"
+    },
+    label: {
+      de: "Flächen Desinfektion (Anzahl Kanister noch vorhanden)",
+      en: "Surface Desinfect (Number of full Kanister still there)",
+      no: " Desinfeksjon for overflater (antall Kanister igjen)"
+    },
+    placeholderName: {
+      de: "Anzahl Kanister eintragen",
+      en: "Enter number of Kanister",
+      no: "Skriv inn antall Kanister"
+    },
+    forOnLabel: ""
+  },
+  {
+    id: "Dishwasher salt",
+    name: {
+      de: "Salz für die Spühlmaschine",
+      en: "Salt for dishwasher",
+      no: "Salt til oppvask maskinen"
+    },
+    label: {
+      de: "Klarspühler (Anzahl Flaschen noch vorhanden)",
+      en: "Klarspühler (Number of full bottles still there)",
+      no: "Klarspühler (antall flasker igjen)"
+    },
+    placeholderName: {
+      de: "Flasachen Anzahl eintragen",
+      en: "Enter number of bottles",
+      no: "Skriv inn antall flasker"
+    },
+    forOnLabel: ""
+  },
+  {
+    id: "Klarspühler",
+    name: {
+      de: "Klarspühler",
+      en: "Klarspühler",
+      no: "Klarspühler"
+    },
+    label: {
+      de: "Klarspühler (Anzahl Flaschen noch vorhanden)",
+      en: "Klarspühler (Number of full bottles still there)",
+      no: "Klarspühler (antall flasker igjen)"
+    },
+    placeholderName: {
+      de: "Flasachen Anzahl eintragen",
+      en: "Enter number of bottles",
+      no: "Skriv inn antall flasker"
+    },
+    forOnLabel: ""
+  },
+  {
     id: "vacuumCleanerBags",
     name: {
       de: "Staubsaugerbeutel",
@@ -268,5 +401,24 @@ export const products = [
       no: "Skriv inn antall"
     },
     forOnLabel: "disinfectant-wipes"
+  },
+  {
+    id: "Washtabs",
+    name: {
+      de: "Washtabs",
+      en: "Washtabs",
+      no: "Washtabs"
+    },
+    label: {
+      de: "Box (Anzahl volle Packungen)",
+      en: "Box (Number of full packages)",
+      no: "Boks (antall fulle pakker)"
+    },
+    placeholderName: {
+      de: "Anzahl eintragen",
+      en: "Enter number of boxes",
+      no: "Skriv inn antall bokser"
+    },
+    forOnLabel: "Washtabs"
   }
 ];
