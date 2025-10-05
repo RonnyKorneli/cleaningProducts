@@ -6,6 +6,8 @@ import { products } from "../data/products";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+console.log(products, "Products");
 ---
 
 <form class="cleaning-list wide-width" id="cleaning-form">
