@@ -58,6 +58,7 @@ console.log(products, "Products");
 </style>
 
 <script>
+  const lang = document.documentElement.lang;
   const form = document.getElementById("cleaning-form") as HTMLFormElement;
   const submitButton = form.querySelector(
     'button[type="submit"]'
@@ -92,7 +93,7 @@ console.log(products, "Products");
 
         if (result.success) {
           const encodedKita = encodeURIComponent(kita || "");
-          window.location.href = `/success?kita=${encodedKita}`;
+          window.location.href = `/${lang}/success?kita=${encodedKita}`;
         }
 
         console.log("Google Sheets response:", result);
