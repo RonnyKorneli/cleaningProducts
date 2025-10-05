@@ -1,7 +1,7 @@
 
 export const products = [
   {
-    id: "disposable changing mat",
+    id: "disposableChangingMat",
     name: {
       de: "Wickeltisch Papier",
       en: "disposable changing mat",
@@ -20,7 +20,7 @@ export const products = [
     forOnLabel: ""
   },
   {
-    id: "Garbage Bags",
+    id: "GarbageBags",
     name: {
       de: "Müllbeutel",
       en: "Garbage bags",
@@ -39,45 +39,45 @@ export const products = [
     forOnLabel: ""
   },
   {
-    id: "Small Mops",
+    id: "SmallMops",
     name: {
       de: "Kleine Mop",
       en: "Small Mop",
       no: "Liten Mop"
     },
     label: {
-      de: "Flächen Desinfektion (Anzahl Kanister noch vorhanden)",
-      en: "Surface Desinfect (Number of full Kanister still there)",
-      no: " Desinfeksjon for overflater (antall Kanister igjen)"
+      de: "Kleine Mop Wisch Tücher (Stk Anzahl)",
+      en: "Small Mops (Numbert of Mops)",
+      no: "Antall Smä Mopper"
     },
     placeholderName: {
-      de: "Anzahl Kanister eintragen",
-      en: "Enter number of Kanister",
-      no: "Skriv inn antall Kanister"
+      de: "Kleine Mop Wisch Tücher (Stk Anzahl)",
+      en: "Small Mops (Numbert of Mops)",
+      no: "Antall Smä Mopper"
     },
     forOnLabel: ""
   },
   {
-    id: "toilet cleaner",
+    id: "toiletCleaner",
     name: {
       de: "wc reiniger",
       en: "toilet cleaner",
       no: "toalettrens"
     },
     label: {
-      de: "Flächen Desinfektion (Anzahl Kanister noch vorhanden)",
-      en: "Surface Desinfect (Number of full Kanister still there)",
-      no: " Desinfeksjon for overflater (antall Kanister igjen)"
+      de: "wc reiniger",
+      en: "toilet cleaner",
+      no: "toalettrens"
     },
     placeholderName: {
-      de: "Anzahl Kanister eintragen",
-      en: "Enter number of Kanister",
-      no: "Skriv inn antall Kanister"
+      de: "wc reiniger",
+      en: "toilet cleaner",
+      no: "toalettrens"
     },
     forOnLabel: ""
   },
   {
-    id: "Surface Desinfect",
+    id: "SurfaceDesinfect",
     name: {
       de: "Flächen Desinfektion",
       en: "Surface Desinfect",
@@ -96,7 +96,7 @@ export const products = [
     forOnLabel: ""
   },
   {
-    id: "Dishwasher salt",
+    id: "DishwasherSalt",
     name: {
       de: "Salz für die Spühlmaschine",
       en: "Salt for dishwasher",
@@ -191,7 +191,7 @@ export const products = [
     forOnLabel: "hand-soap-refillable"
   },
   {
-    id: "scouringMilk",
+    id: "ScouringMilk",
     name: {
       de: "Scheuermilch / Cremereiniger",
       en: "Milk / Cream Cleanser",
@@ -210,7 +210,7 @@ export const products = [
     forOnLabel: "scouring-milk"
   },
   {
-    id: "foldedPaperTowels",
+    id: "FoldedPaperTowels",
     name: {
       de: "Gefaltete Papiertücher",
       en: "Folded Paper Towels",
@@ -229,7 +229,7 @@ export const products = [
     forOnLabel: "folded-paper-towels"
   },
   {
-    id: "toiletPaper",
+    id: "ToiletPaper",
     name: {
       de: "Toilettenpapier",
       en: "Toilet Paper",
@@ -248,7 +248,7 @@ export const products = [
     forOnLabel: "toilet-paper"
   },
   {
-    id: "disinfectantHands",
+    id: "DisinfectantHands",
     name: {
       de: "Händedesinfektionsmittel",
       en: "Disinfectant Hands",
@@ -267,7 +267,7 @@ export const products = [
     forOnLabel: "disinfectant-hands"
   },
   {
-    id: "redCleaningAgent",
+    id: "RedCleaningAgent",
     name: {
       de: "Rotes Reinigungsmittel",
       en: "Red Cleaning Agent",
@@ -286,7 +286,7 @@ export const products = [
     forOnLabel: "red-cleaning-agent"
   },
   {
-    id: "blueCleaningAgent",
+    id: "BlueCleaningAgent",
     name: {
       de: "Blaues Reinigungsmittel",
       en: "Blue Cleaning Agent",
@@ -305,7 +305,7 @@ export const products = [
     forOnLabel: "blue-cleaning-agent"
   },
   {
-    id: "disinfectantWipes",
+    id: "DisinfectantWipes",
     name: {
       de: "Desinfektionstücher",
       en: "Disinfectant Wipes",
